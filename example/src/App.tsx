@@ -11,23 +11,24 @@ import { type ResizeButtonProps, Resizer } from 'react-native-view-resizer';
 
 const { width } = Dimensions.get('screen');
 
-export default function App() {
-  const renderResizeButtonComponent = ({
-    onPress,
-    size,
-    backgroundColor,
-  }: ResizeButtonProps & { backgroundColor: string }) => {
-    return (
-      <Pressable
-        onPress={onPress}
-        style={[styles.resize_button, { backgroundColor }]}
-      >
-        <Text>resize</Text>
-        <Text>{size}px</Text>
-      </Pressable>
-    );
-  };
+const renderResizeButtonComponent = ({
+  onPress,
+  size,
+  index,
+  backgroundColor,
+}: ResizeButtonProps & { backgroundColor: string }) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={[styles.resize_button, { backgroundColor }]}
+    >
+      <Text>size: {size}px</Text>
+      <Text>index: {index}</Text>
+    </Pressable>
+  );
+};
 
+export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView>

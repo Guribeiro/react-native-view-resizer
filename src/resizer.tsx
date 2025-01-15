@@ -12,6 +12,7 @@ type AtLeastTwoItems<T> = [T, T, ...T[]];
 export type ResizeButtonProps = {
   onPress: () => void
   size: number
+  index: number
 }
 
 export interface ResizerProps extends ComponentProps<Animated.View> {
@@ -56,6 +57,7 @@ export const Resizer = ({
         ? resizeButtonComponent({
           onPress: onResize,
           size,
+          index
         })
         : (
           <Pressable
