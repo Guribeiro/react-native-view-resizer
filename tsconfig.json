@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    // "rootDir": ".",
+    // "baseUrl": "./", /* Specify the base directory to resolve non-relative module names. */
     "paths": {
-      "react-native-view-resizer": ["./src/index"]
+      "react-native-view-resizer": ["./src/index"],
+      "@/*": [
+        "./src/*"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
