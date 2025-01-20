@@ -7,7 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { type ResizeButtonProps, Resizer } from 'react-native-view-resizer';
+import Resizer, { type ResizeButtonProps } from 'react-native-view-resizer';
 
 const { width } = Dimensions.get('screen');
 
